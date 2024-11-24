@@ -11,6 +11,13 @@
 + PUT {{baseURL}}/booking/1
 + DELETE {{baseURL}}/booking/2
 
+
+# 🎯Configuração do ambiente de testes #
+Antes de realizar os testes na API configurei o ambiente de testes, com algumas variáveis específicas para que fosse usadas nas requisições.
+
+**Ambiente de testes**
+![Ambiente de teste](https://imgur.com/RoaNmv7.png)
+
 # 📈Testando a API no Postman📈 #
 No Postman foi adicionado a collection da API restful-booker, além de realizar os testes de CRUD, também realizei algumas validações, como por exemplo: Status code 200. 
 
