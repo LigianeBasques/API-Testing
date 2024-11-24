@@ -19,3 +19,8 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 
 **Tentar gerar token com credenciais inválidas**
 ![Resultado testes](https://imgur.com/pBUH6iG.png)
+
+### 📁Gestão de reservas ###
+
+**Criar uma nova reserva**
+![Criar uma nova reserva](https://imgur.com/qR8UEYz.png)
