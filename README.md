@@ -12,3 +12,7 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 
 **Tentar gerar token com credenciais inválidas**
 ![Credencial inválidao](https://imgur.com/nEYTqTZ.png)
+
+### Resultados dos Testes ###
+**Gerar token de autenticação**
+![Resultado testes](https://imgur.com/CJsRYpO.png)
