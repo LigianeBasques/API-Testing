@@ -2,6 +2,11 @@
 
 # 👀Visão Geral👀 #
 É uma API do Restful-Booker, um sistema de reservas de um hotel
+# 🏷️Roteiro de testes🏷️ #
+Foi elaborado o roteiro de testes, nesse roteiro é detalhado: os cenários, casos de testes, os passos, ações, dados de entrada, condições de teste, resultados esperados e pré-requisitos necessários para executar testes na API.
+
+## Planilha com roteiro de testes ##
+<li> <a href="https://docs.google.com/spreadsheets/d/1afhy_VfZz8fT36ht8TWZGQPFUC8ujS0ugnSET1M5cD8/edit?usp=drive_link" rel=nofollow>ROTEIRO DE TESTES-API</a><//li>
 
 # 🔨 Estrutura dos testes da API🔨  #
 + **Restful-booker:** CRUD (Create, Read, Put, Delete) para gerenciar informações sobre reservas em um hotel, como criar uma reserva, buscar uma reserva especifica, listar todas as reservas, atualizar as reservas e deletar uma reserva, filtar por nome, filtrar por check in ou checkout e gerar token.
