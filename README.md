@@ -76,6 +76,7 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 **Deletar uma reserva**
 ![Deletar reserva](https://imgur.com/O3Z0L3b.png)
 
+
 ### 📋 Filtros e buscas: ###
 **Buscar reservas por nome**
 ![Busca nome](https://imgur.com/bQ7ITP2.png)
@@ -83,3 +84,9 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 
 **Buscar reservas por data de check-in e por data de check-out**
 ![Busca checkin e checkout](https://imgur.com/46vlKay.png)
+
+
+## 🐞BUGS encontrados🐞 ##
+## Planilha com relatório de bugs ##
+**Através do relatório de bugs, você pode usar os filtros para gerenciar a quantidade, status, severidade e prioridade dos bugs. Foi aplicado nessa planilha filtros**
+<li> <a href="https://docs.google.com/spreadsheets/d/1DTmUYXzHShtqkni2SNJEd_hmfyJNmcDSLR02wjHlxC4/edit?usp=drive_link" rel=nofollow>RELATÓRIO DE BUGS</a><//li>
