@@ -1,7 +1,15 @@
-# 🏨API Restful -booker🏨 #
+# 🏨API Restful-booker🏨 #
 
 # 👀Visão Geral👀 #
 É uma API do Restful-Booker, um sistema de reservas de um hotel
+
+# 🔨 Estrutura dos testes da API🔨  #
++ **Restful-booker:** CRUD (Create, Read, Put, Delete) para gerenciar informações sobre reservas em um hotel, como criar uma reserva, buscar uma reserva especifica, listar todas as reservas, atualizar as reservas e deletar uma reserva e gerar token.
++ **Endpoints comuns:**
++ POST {{baseURL}}/booking
++ GET {{baseURL}}/booking/{{id}}
++ PUT {{baseURL}}/booking/1
++ DELETE {{baseURL}}/booking/2
 
 # 📈Testando a API no Postman📈 #
 No Postman foi adicionado a collection da API restful-booker, além de realizar os testes de CRUD, também realizei algumas validações, como por exemplo: Status code 200. 
