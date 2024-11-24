@@ -52,3 +52,14 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ### 🔎Resultados dos Testes ###
 **Atualizar uma reserva existente**
 ![Atualizar reserva](https://imgur.com/1dpFZnh.png)
+
+**Deletar uma reserva**
+![Deletar reserva](https://imgur.com/O3Z0L3b.png)
+
+### 📋 Filtros e buscas: ###
+**Buscar reservas por nome**
+![Busca nome](https://imgur.com/bQ7ITP2.png)
+
+
+**Buscar reservas por data de check-in e por data de check-out**
+![Busca checkin e checkout](https://imgur.com/46vlKay.png)
