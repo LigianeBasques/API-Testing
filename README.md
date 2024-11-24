@@ -41,3 +41,10 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ### 🔎Resultados dos Testes ###
 **Listar todas as reservas**
 ![Lista todas a reservas](https://imgur.com/TufVamf.png)
+
+**Atualizar uma reserva existente**
+**Antes de atualizar dado**
+![Atualizar reserva](https://imgur.com/WJ3UcEE.png)
+
+**Dado atualizado**
+![Atualizar reserva](https://imgur.com/LgRLUdj.png)
