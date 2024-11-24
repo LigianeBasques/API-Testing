@@ -19,7 +19,7 @@ Antes de realizar os testes na API configurei o ambiente de testes, com algumas 
 ![Ambiente de teste](https://imgur.com/RoaNmv7.png)
 
 # 📈Testando a API no Postman📈 #
-No Postman foi adicionado a collection da API restful-booker, além de realizar os testes de CRUD, também realizei algumas validações, como por exemplo: Status code 200. 
+No Postman foi adicionado a collection da API restful-booker, além de realizar os testes de CRUD, também realizei algumas validações, como por exemplo: Status code 200, tempo de resposta, campos obrigatórios, formato da datas entre outros. 
 
 ### ✅Autenticação ###
 **Gerar token de autenticação**
