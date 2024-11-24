@@ -4,7 +4,7 @@
 É uma API do Restful-Booker, um sistema de reservas de um hotel
 
 # 🔨 Estrutura dos testes da API🔨  #
-+ **Restful-booker:** CRUD (Create, Read, Put, Delete) para gerenciar informações sobre reservas em um hotel, como criar uma reserva, buscar uma reserva especifica, listar todas as reservas, atualizar as reservas e deletar uma reserva e gerar token.
++ **Restful-booker:** CRUD (Create, Read, Put, Delete) para gerenciar informações sobre reservas em um hotel, como criar uma reserva, buscar uma reserva especifica, listar todas as reservas, atualizar as reservas e deletar uma reserva, filtar por nome, filtrar por check in ou checkout e gerar token.
 + **Endpoints comuns:**
 + POST {{baseURL}}/booking
 + GET {{baseURL}}/booking/{{id}}
