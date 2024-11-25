@@ -18,7 +18,7 @@ Foi elaborado o roteiro de testes, nesse roteiro é detalhado: os cenários, cas
 
 
 # 🎯Configuração do ambiente de testes #
-Antes de realizar os testes na API configurei o ambiente de testes, com algumas variáveis específicas para que fosse usadas nas requisições.
+Antes de realizar os testes na API configurei o ambiente de testes, com algumas variáveis específicas para que fossem usadas nas requisições.
 
 **Ambiente de testes**
 ![Ambiente de teste](https://imgur.com/RoaNmv7.png)
