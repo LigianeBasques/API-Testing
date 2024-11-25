@@ -87,7 +87,7 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 
 
 ## 📚Colecttion ##
-
+## Colection em formato json ##
 <li> <a href="https://github.com/LigianeBasques/API-Testing/blob/master/Restful-booker.postman_collection.json" rel=nofollow>COLLECTION-API</a><//li>
 
 
