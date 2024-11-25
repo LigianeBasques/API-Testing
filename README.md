@@ -36,7 +36,7 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ### 🔎Resultados dos Testes ###
 **Gerar token de autenticação**
 ![Resultado testes](https://imgur.com/CJsRYpO.png)
-
+___
 **Tentar gerar token com credenciais inválidas**
 ![Resultado testes](https://imgur.com/pBUH6iG.png)
 
@@ -48,20 +48,20 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ### 🔎Resultados dos Testes ###
 **Criar uma nova reserva**
 ![Criar uma nova reserva](https://imgur.com/Q1tUJND.png)
-
+___
 **Buscar uma reserva específica**
 ![Busca reserva id](https://imgur.com/cVeUaxq.png)
 
 ### 🔎Resultados dos Testes ###
 **Buscar uma reserva específica**
 ![Busca reserva id](https://imgur.com/GXHDz1u.png)
-
+___
 **Listar todas as reservas**
 ![Lista todas a reservas](https://imgur.com/a0MC63q.png)
 ### 🔎Resultados dos Testes ###
 **Listar todas as reservas**
 ![Lista todas a reservas](https://imgur.com/TufVamf.png)
-
+___
 **Atualizar uma reserva existente**
 + **Antes de atualizar dado**
 ![Atualizar reserva](https://imgur.com/WJ3UcEE.png)
@@ -72,7 +72,7 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ### 🔎Resultados dos Testes ###
 **Atualizar uma reserva existente**
 ![Atualizar reserva](https://imgur.com/1dpFZnh.png)
-
+___
 **Deletar uma reserva**
 ![Deletar reserva](https://imgur.com/O3Z0L3b.png)
 
