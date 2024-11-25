@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "1f615a37-22e7-4d74-ae7a-0d9f8a6705ed",
+		"name": "Restful-booker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27474337",
+		"_collection_link": "https://grey-resonance-118395.postman.co/workspace/API-Testing~b5897e89-c534-4ba7-b226-199ef9481589/collection/27474337-1f615a37-22e7-4d74-ae7a-0d9f8a6705ed?action=share&source=collection_link&creator=27474337"
+	},
+	"item": [
+		{
+			"name": "Autenticacao",
+			"item": [
+				{
+					"name": "Gerar token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validar Status code 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar tempo de resposta menor que 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(902);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Token com credencial inválida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Validar se a resposta contém campos obrigatórios\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.reason).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar se o tempo de resposta é menor 500ms\", function () {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"ligiane\",\n    \"password\" : \"api123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/auth"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gestao Reserva",
+			"item": [
+				{
+					"name": "Criar uma nova reserva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validar status code 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar se a resposta contém os campos obrigatórios\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.property('bookingid');\r",
+									"    pm.expect(responseData).to.have.property('booking');\r",
+									"    pm.expect(responseData.booking).to.have.property('firstname');\r",
+									"    pm.expect(responseData.booking).to.have.property('lastname');\r",
+									"    pm.expect(responseData.booking).to.have.property('totalprice');\r",
+									"    pm.expect(responseData.booking).to.have.property('depositpaid');\r",
+									"    pm.expect(responseData.booking).to.have.property('bookingdates');\r",
+									"    pm.expect(responseData.booking).to.have.property('additionalneeds');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar as datas de check-in e check-out estão em um formato de data válido\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.booking.bookingdates.checkin).to.match(/^\\d{4}-\\d{2}-\\d{2}$/);\r",
+									"  pm.expect(responseData.booking.bookingdates.checkout).to.match(/^\\d{4}-\\d{2}-\\d{2}$/);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Luci\",\n    \"lastname\" : \"Oliveira\",\n    \"totalprice\" : 355,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2024-10-08\",\n        \"checkout\" : \"2024-11-09\"\n    },\n    \"additionalneeds\" : \"Almoço\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/booking"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar uma reserva específica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validar status code 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar se o tempo de resposta é menor que 300ms\", function () {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar campos obrigatórios\", function () {\r",
+									"    var responseJSON = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseJSON).to.have.property('firstname').that.is.a('string').and.not.empty;\r",
+									"    pm.expect(responseJSON).to.have.property('lastname').that.is.a('string').and.not.empty;\r",
+									"    pm.expect(responseJSON).to.have.property('totalprice').that.is.a('number');\r",
+									"    pm.expect(responseJSON).to.have.property('depositpaid').that.is.a('boolean');\r",
+									"    pm.expect(responseJSON).to.have.property('bookingdates').that.is.an('object').and.not.empty;\r",
+									"    pm.expect(responseJSON.bookingdates).to.have.property('checkin').that.is.a('string').and.not.empty;\r",
+									"    pm.expect(responseJSON.bookingdates).to.have.property('checkout').that.is.a('string').and.not.empty;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/booking/{{id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas as reservas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validar Status code 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar se o tempo de resposta está dentro do aceitavél\", function () {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar se a resposta contém os campos obrigatórios \", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('array');\r",
+									"    responseData.forEach(function(booking) {\r",
+									"        pm.expect(booking).to.have.property('bookingid');\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/booking"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar uma reserva existente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validar status code 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar se resposta contém campos obrigatórios\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.property('firstname');\r",
+									"    pm.expect(responseData).to.have.property('lastname');\r",
+									"    pm.expect(responseData).to.have.property('totalprice');\r",
+									"    pm.expect(responseData).to.have.property('depositpaid');\r",
+									"    pm.expect(responseData).to.have.property('bookingdates');\r",
+									"    pm.expect(responseData).to.have.property('additionalneeds');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar as datas de check-in e check-out estão em um formato de data válido \", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.bookingdates.checkin).to.match(/^\\d{4}-\\d{2}-\\d{2}$/);\r",
+									"  pm.expect(responseData.bookingdates.checkout).to.match(/^\\d{4}-\\d{2}-\\d{2}$/);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "password123",
+								"username": "admin"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=abc123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Clara\",\n    \"lastname\" : \"Maria\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Jantar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/booking/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar uma reserva",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "password123",
+								"username": "admin"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=abc123"
+							}
+						],
+						"url": "{{baseURL}}/booking/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filtros e buscas",
+			"item": [
+				{
+					"name": "Buscar reservas por nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/booking?firstname=sally&lastname=brown",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "sally"
+								},
+								{
+									"key": "lastname",
+									"value": "brown"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar reservas por data de check-in e check-out",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/booking?checkin=2014-03-13&checkout=2014-05-21",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "checkin",
+									"value": "2014-03-13"
+								},
+								{
+									"key": "checkout",
+									"value": "2014-05-21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": ""
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
