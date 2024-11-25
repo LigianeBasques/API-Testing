@@ -1,7 +1,7 @@
 # 🏨API Restful-booker🏨 #
 
 # 👀Visão Geral👀 #
-É uma API do Restful-Booker, um sistema de reservas de um hotel
+A API do Restful-Booker, um sistema que simula reservas de um hotel
 # 🏷️Roteiro de testes🏷️ #
 Foi elaborado o roteiro de testes, nesse roteiro é detalhado: os cenários, casos de testes, os passos, ações, dados de entrada, condições de teste, resultados esperados e pré-requisitos necessários para executar testes na API.
 
