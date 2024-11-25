@@ -89,4 +89,4 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ## 🐞BUGS encontrados🐞 ##
 ## Planilha com relatório de bugs ##
 **Através do relatório de bugs, você pode usar os filtros para gerenciar a quantidade, status, severidade e prioridade dos bugs. Foi aplicado nessa planilha filtros**
-<li> <a href="https://docs.google.com/spreadsheets/d/1DTmUYXzHShtqkni2SNJEd_hmfyJNmcDSLR02wjHlxC4/edit?usp=drive_link" rel=nofollow>RELATÓRIO DE BUGS</a><//li>
+<li> <a href="https://docs.google.com/spreadsheets/d/1skvW9_tntkYjuaQIGEPlXOHqnFzMMXyxbsybzAN_wK0/edit?usp=sharing" rel=nofollow>RELATÓRIO DE BUGS-API</a><//li>
