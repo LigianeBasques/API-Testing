@@ -86,6 +86,9 @@ No Postman foi adicionado a collection da API restful-booker, além de realizar 
 ![Busca checkin e checkout](https://imgur.com/46vlKay.png)
 
 
+## Colettion ##
+
+
 ## 🐞BUGS encontrados🐞 ##
 ## Planilha com relatório de bugs ##
 **Através do relatório de bugs, você pode usar os filtros para gerenciar a quantidade, status, severidade e prioridade dos bugs. Foi aplicado nessa planilha filtros**
